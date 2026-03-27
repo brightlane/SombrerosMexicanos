@@ -4,27 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Optimized title -->
-  <title>Sombreros Mexicanos Auténticos | La Fuente Imports 2026</title>
+  <title>Sombreros Mexicanos Auténticos | Authentic Charro Hats by La Fuente Imports</title>
   
-  <meta name="description" content="🏆 Sombreros mexicanos auténticos, sombrero mexicano original vía La Fuente Imports. 500+ estilos con guía completa.">
+  <meta name="description" content="Compra sombreros mexicanos auténticos, sombrero mexicano original, sombrero de charro, mariachi, jaripeo y vaqueros vía La Fuente Imports. 500+ estilos con guía completa y envío internacional.">
 
-  <!-- Canonical + Hreflang for GitHub -->
   <link rel="canonical" href="https://brightlane.github.io/SombrerosMexicanos/">
   <link rel="alternate" hreflang="x-default" href="https://brightlane.github.io/SombrerosMexicanos/">
+  <link rel="alternate" hreflang="es" href="https://brightlane.github.io/SombrerosMexicanos/">
+  <link rel="alternate" hreflang="en" href="https://brightlane.github.io/SombrerosMexicanos/">
 
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="Sombreros Mexicanos Auténticos | La Fuente Imports">
-  <meta property="og:description" content="Guía sombreros mexicanos auténticos, sombrero charro, mariachi.">
+  <meta property="og:description" content="Sombrero mexicano auténtico, sombrero charro, mariachi, jaripeo y vaquero. Guía completa y 500+ estilos.">
   <meta property="og:url" content="https://brightlane.github.io/SombrerosMexicanos/">
   <meta property="og:site_name" content="SombrerosMexicanos">
+  <meta property="og:type" content="website">
 
-  <!-- Preconnect affiliate -->
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sombreros Mexicanos Auténticos | La Fuente Imports">
+  <meta name="twitter:description" content="Sombrero mexicano auténtico, sombrero charro, mariachi, jaripeo y vaquero. Guía completa y 500+ estilos.">
+
+  <!-- Theme / favicon hints -->
+  <meta name="theme-color" content="#D4AF37">
+
+  <!-- JSON‑LD Schema for Google / Bing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "La Fuente Imports",
+    "url": "https://brightlane.github.io/SombrerosMexicanos/",
+    "logo": "https://brightlane.github.io/SombrerosMexicanos/images/logo.png",
+    "description": "Authentic Mexican sombreros and charro hats handmade in Mexico. 500+ styles available for international buyers.",
+    "sameAs": [
+      "https://www.facebook.com/lafuenteimports",
+      "https://www.instagram.com/lafuenteimports"
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "89",
+      "highPrice": "249",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Preconnect for affiliate network -->
   <link rel="preconnect" href="https://www.linkconnector.com">
 
-  <!-- YOUR ORIGINAL CSS + CLICKABLE + VISIBILITY ENHANCEMENTS -->
+  <!-- YOUR ORIGINAL CSS + TOP‑RIGHT SIDEBAR -->
   <style>
     :root {
       --accent: #b8860b;
@@ -35,6 +66,7 @@
       --text-light: #333;
       --border: #ddd;
       --max-width: 1120px;
+      --sidebar-width: 320px;
       --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
@@ -45,10 +77,34 @@
       color: var(--text);
       line-height: 1.6;
     }
+    
+    /* MAIN LAYOUT WITH SIDEBAR */
+    .page-container {
+      display: flex;
+      min-height: 100vh;
+      max-width: calc(var(--max-width) + var(--sidebar-width) + 2rem);
+      margin: 0 auto;
+    }
+    main {
+      flex: 1;
+      padding: 2rem 1.5rem;
+      max-width: calc(100% - var(--sidebar-width));
+    }
+    .sidebar {
+      width: var(--sidebar-width);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 2rem 1rem;
+      background: white;
+      box-shadow: -4px 0 20px rgba(184,134,11,0.15);
+      overflow-y: auto;
+    }
+    
     a { color: var(--accent-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
     
-    /* CLICKABLE STICKY HEADER - HIGH VISIBILITY */
+    /* CLICKABLE HEADER */
     header {
       border-bottom: 3px solid var(--accent-glow);
       background: #fff;
@@ -57,13 +113,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      margin-bottom: 2rem;
     }
     .wrap {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 1rem;
     }
-    /* HEADLINE CLICKABLE + GLOW */
     header h1 {
       margin: 0;
       font-size: 2.2rem;
@@ -75,7 +131,6 @@
       text-align: center;
       cursor: pointer;
       transition: all 0.3s;
-      text-shadow: 0 2px 8px rgba(184,134,11,0.3);
     }
     header h1:hover {
       transform: scale(1.03);
@@ -87,7 +142,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       align-items: center;
-      margin: 2rem 0;
+      margin-bottom: 2rem;
     }
     .hero img {
       width: 100%;
@@ -95,263 +150,210 @@
       border-radius: 0.5rem;
       box-shadow: 0 8px 25px rgba(184,134,11,0.3);
       border: 3px solid var(--accent-glow);
+      cursor: pointer;
     }
-    main {
-      padding: 2rem 0;
-    }
+    
     section { 
-      margin-bottom: 3rem; 
+      margin-bottom: 2.5rem; 
       padding: 2rem;
       background: white;
       border-radius: 1rem;
       box-shadow: 0 6px 20px rgba(184,134,11,0.15);
       border-top: 4px solid var(--accent-glow);
-      transition: all 0.3s;
-    }
-    section:hover {
-      box-shadow: 0 10px 30px rgba(184,134,11,0.25);
-      transform: translateY(-2px);
     }
     h2 { 
-      margin-top: 0; 
-      margin-bottom: 1rem;
       color: var(--accent-glow) !important;
       font-size: 1.8rem;
       font-weight: 700;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
-    h3 { 
-      color: var(--accent-dark);
-      border-bottom: 2px solid var(--accent-glow);
+    
+    /* SIDEBAR WIDGETS - HIGH VALUE */
+    .sidebar-widget {
+      background: linear-gradient(135deg, #FFF8E1 0%, white 100%);
+      border: 2px solid var(--accent-glow);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(184,134,11,0.2);
+      transition: all 0.3s;
+    }
+    .sidebar-widget:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(184,134,11,0.3);
+    }
+    .sidebar-widget h3 {
+      color: var(--accent-glow);
+      margin-top: 0;
+      font-size: 1.3rem;
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 0.5rem;
     }
-    ul, ol { margin: 0.5rem 0; padding-left: 1.5rem; }
-    p { margin-bottom: 1rem; }
+    .quick-sizes table {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    .quick-sizes th, .quick-sizes td {
+      padding: 0.5rem;
+      text-align: center;
+      border: 1px solid #eee;
+    }
     
-    /* HYPER-VISIBLE CTAs */
+    /* ULTIMATE CTAs */
     .product-link {
-      display: inline-block;
+      display: block;
       background: linear-gradient(45deg, var(--accent-glow), var(--accent));
       color: #111 !important;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       border-radius: 0.5rem;
       font-weight: 700;
-      font-size: 1.1rem;
-      margin: 1.5rem 0;
+      text-align: center;
+      margin: 1rem 0;
       box-shadow: 0 6px 20px rgba(184,134,11,0.4);
       border: 2px solid var(--accent-glow);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s;
       position: relative;
       overflow: hidden;
     }
     .product-link::before {
       content: '🛒 ';
-      font-size: 1.2em;
     }
     .product-link:hover {
-      background: linear-gradient(45deg, var(--accent), var(--accent-dark));
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(184,134,11,0.5);
-      color: #111 !important;
-    }
-    
-    /* TABLE ENHANCEMENT */
-    table { 
-      width: 100%; 
-      border-collapse: collapse; 
-      margin: 1.5rem 0; 
-      background: white;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(184,134,11,0.2);
-    }
-    th { 
-      background: linear-gradient(45deg, var(--accent-glow), var(--accent));
-      color: #111 !important;
-      padding: 1rem 1.5rem;
-      font-weight: 700;
-    }
-    td { padding: 1rem 1.5rem; border-bottom: 1px solid #f0f0f0; }
-    tr:hover { background: #FFF8E1; }
-    
-    /* REVIEWS */
-    .review {
-      background: linear-gradient(135deg, #FFF8E1 0%, white 100%);
-      border-left: 5px solid var(--accent-glow);
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 0.5rem;
-      font-style: italic;
-      box-shadow: 0 4px 15px rgba(184,134,11,0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(184,134,11,0.5);
     }
     
     footer {
+      grid-column: 1 / -1;
       border-top: 3px solid var(--accent-glow);
-      padding: 2.5rem 0;
-      font-size: 1rem;
-      color: var(--text-light);
+      padding: 2rem 0;
       text-align: center;
       background: white;
-      box-shadow: 0 -4px 15px rgba(184,134,11,0.15);
+      margin-top: 4rem;
     }
     
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      header h1 { font-size: 1.8rem; }
-      .product-link { 
+    /* Mobile / responsive */
+    @media (max-width: 1024px) {
+      .page-container { flex-direction: column; }
+      .sidebar { 
         width: 100%; 
-        text-align: center;
-        padding: 1.2rem;
+        height: auto; 
+        position: static;
+        order: -1;
       }
+      main { max-width: 100%; }
+      .hero { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
     }
   </style>
-
-  <!-- ENHANCED SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Sombreros Mexicanos Auténticos - Guía Completa 2026",
-    "description": "Sombreros mexicanos auténticos, sombrero charro, mariachi, jaripeo. Guía completa tallas/cuidado.",
-    "url": "https://brightlane.github.io/SombrerosMexicanos/",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Sombreros Mexicanos"}
-      ]
-    }
-  }
-  </script>
-
 </head>
 
 <body>
-  <!-- CLICKABLE HEADLINE HEADER -->
-  <header onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
-          role="button" tabindex="0" aria-label="Ir a sombreros mexicanos auténticos">
-    <div class="wrap">
-      <h1>Authentic Mexican Sombreros & Charro Hats</h1>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <!-- HERO - CLICKABLE ELEMENTS -->
-    <section class="hero">
-      <div onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
+  <div class="page-container">
+    <!-- TOP‑RIGHT SIDEBAR - FILLED WITH VALUE + AFFILIATE -->
+    <aside class="sidebar">
+      <!-- MAIN AFFILIATE BANNER -->
+      <div class="sidebar-widget" 
+           onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
            style="cursor:pointer;">
-        <h2>Discover Authentic Sombrero Mexicano Original Styles</h2>
-        <p>🏆 #1 Guía completa: sombrero mexicano auténtico, sombrero de charro, charro fino sombrero, sombrero mariachi, sombrero jaripeo, sombrero vaquero, sombrero ranchero, sombrero jarano, sombrero de ala ancha, sombrero artesanal hecho en México vía La Fuente Imports. 500+ estilos, guía histórica, comparativas, tallas, cuidado y envío internacional.</p>
-        <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb" class="product-link" target="_blank" rel="sponsored nofollow">
-          Shop All Mexican Sombreros
+        <h3>🔥 Sombreros Más Vendidos</h3>
+        <p><strong>Charro Negro Oro</strong><br>$249 • <em>Envío Gratis</em></p>
+        <p><strong>Mariachi Plata</strong><br>$189 • <em>Stock Limitado</em></p>
+        <div class="product-link" style="margin-top:1.5rem;">
+          VER OFERTAS AHORA
+        </div>
+      </div>
+
+      <!-- QUICK SIZE CHART -->
+      <div class="sidebar-widget">
+        <h3>📏 Tallas Rápidas</h3>
+        <table class="quick-sizes">
+          <tr><th>Medida</th><th>Talla</th></tr>
+          <tr><td>21-21.5"</td><td>Pequeña</td></tr>
+          <tr><td>22-22.5"</td><td><strong>Mediana</strong></td></tr>
+          <tr><td>23-23.5"</td><td>Grande</td></tr>
+          <tr><td>24+"</td><td>Extra</td></tr>
+        </table>
+        <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb#size-guide" 
+           class="product-link" 
+           target="_blank" 
+           rel="nofollow sponsored">
+          Guía Completa
         </a>
       </div>
-      <div onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
-           style="cursor:pointer;">
-        <img src="https://yourdomain.com/images/sombrero-mexicano-hero.jpg" 
-             alt="Sombrero mexicano original charro fino sombrero mariachi sombrero jaripeo vaquero" 
-             loading="lazy" width="800" height="600">
+
+      <!-- BEST SELLERS -->
+      <div class="sidebar-widget">
+        <h3>⭐ Más Populares</h3>
+        <ul style="padding-left:1rem; margin:0;">
+          <li><strong>1.</strong> Sombrero Charro Negro</li>
+          <li><strong>2.</strong> Mariachi Oro Plata</li>
+          <li><strong>3.</strong> Jaripeo Vaquero</li>
+          <li><strong>4.</strong> Sombrero Paja Playa</li>
+        </ul>
+        <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb#bestsellers" 
+           class="product-link" 
+           target="_blank" 
+           rel="nofollow sponsored">
+          Ver Top 10
+        </a>
       </div>
-    </section>
 
-    <!-- ALL YOUR ORIGINAL CONTENT + CLICKABLE -->
-    <section aria-labelledby="history-heading">
-      <h2 id="history-heading">Historia del Sombrero Mexicano Original</h2>
-      <p>El sombrero mexicano original, o sombrero mexicano auténtico, tiene raíces en el siglo XVI fusionando influencias españolas y tradiciones indígenas. Diseñado originalmente para protección solar, evolucionó a símbolo de identidad mexicana en mariachi, jaripeo, quinceañeras y fiestas nacionales.</p>
-      <p>Hoy, el <strong>sombrero de charro</strong>, el <strong>sombrero mariachi</strong>, el <strong>sombrero jaripeo</strong>, el <strong>sombrero vaquero</strong>, y el <strong>sombrero ranchero</strong> son usados en conciertos, bodas, fiestas mexicanas, y rodeos. La Fuente Imports ofrece sombrero artesanal hecho en México para hombres, mujeres y estilos unisex.</p>
-      <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb#history" class="product-link" target="_blank" rel="sponsored nofollow">
-        Ver Más Historia
-      </a>
-    </section>
+      <!-- URGENCY WIDGET -->
+      <div class="sidebar-widget" 
+           onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
+           style="cursor:pointer;">
+        <h3>⚡ ¡Oferta Limitada!</h3>
+        <p><strong>20% OFF</strong> primer sombrero<br>
+        <em>Válido hasta 31 Marzo 2026</em></p>
+        <div class="product-link" style="margin-top:1rem; background: #ff6b35; border-color:#ff8c42;">
+          ¡Aprovechar Oferta!
+        </div>
+      </div>
+    </aside>
 
-    <section aria-labelledby="styles-heading">
-      <h2 id="styles-heading">Styles Principales de Sombrero Mexicano</h2>
-      <ul>
-        <li><strong>Sombrero de charro / charro fino sombrero</strong> – Alta corona, ala ancha, fieltro rico, bordados de oro o plata usados por charros y mariachi.</li>
-        <li><strong>Sombrero mariachi</strong> – A menudo con terciopelo o paño, bordes de oro y cintas decorativas para uniformes de mariachi.</li>
-        <li><strong>Sombrero jaripeo</strong> – Pensado para rodeo y jaripeo, equilibrando estilo y función.</li>
-        <li><strong>Sombrero vaquero / ranchero</strong> – Sombrero de trabajo rústico para vaqueros y rancheros.</li>
-        <li><strong>Sombrero jarano / sombrero de paja mexicano</strong> – Sombrero de paja liviano para calor, fiestas y playa.</li>
-      </ul>
-      <p>La Fuente Imports ofrece sombrero mexicano barato y de alta gama, incluyendo sombrero decorativo para cantina bar mexicano, sombrero de ala ancha para bodas, y sombrero tricolor fiesta para quinceañeras.</p>
-      <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb#styles" class="product-link" target="_blank" rel="sponsored nofollow">
-        Browse 500+ Estilos Sombrero Mexicano
-      </a>
-    </section>
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- CLICKABLE HEADER -->
+      <header 
+        onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
+        role="button" 
+        tabindex="0" 
+        aria-label="Comprar sombreros mexicanos">
+        <div class="wrap">
+          <h1>Authentic Mexican Sombreros & Charro Hats</h1>
+        </div>
+      </header>
 
-    <!-- SIZING -->
-    <section aria-labelledby="sizing-heading">
-      <h2 id="sizing-heading">Guía de Tallas y Ajuste</h2>
-      <ol>
-        <li>Mide la circunferencia de tu cabeza justo encima de las orejas con una cinta métrica.</li>
-        <li>Compara el resultado con la tabla de tallas (pulgadas o centímetros).</li>
-        <li>Considera el forro y material: algunos charro fino sombreros son ligeramente ajustados para jaripeo y vaquero.</li>
-      </ol>
-      <p>Una medida de alrededor de 22 pulgadas suele corresponder a talla media en sombrero mexicano para hombres.</p>
-      <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb#size-guide" class="product-link" target="_blank" rel="sponsored nofollow">
-        Ver Guía de Tallas
-      </a>
-    </section>
+      <!-- HERO -->
+      <section class="hero">
+        <div 
+          onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
+          style="cursor:pointer;">
+          <h2>Discover Authentic Sombrero Mexicano Original Styles</h2>
+          <p>🏆 #1 Guía completa: sombrero mexicano auténtico, sombrero de charro, charro fino sombrero, sombrero mariachi, sombrero jaripeo, sombrero vaquero, sombrero ranchero, sombrero jarano, sombrero de ala ancha, sombrero artesanal hecho en México vía La Fuente Imports. 500+ estilos, guía histórica, comparativas, tallas, cuidado y envío internacional.</p>
+          <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb" 
+             class="product-link" 
+             target="_blank" 
+             rel="sponsored nofollow">
+            Shop All Mexican Sombreros
+          </a>
+        </div>
+        <div 
+          onclick="window.open('https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb','_blank')" 
+          style="cursor:pointer;">
+          <!-- LOCAL IMAGE ON GITHUB PAGES (recommended) -->
+          <img src="images/sombrero-mexicano-hero.jpg" 
+               alt="Sombrero mexicano original, sombrero de charro y mariachi artesanal hecho en México" 
+               loading="lazy" 
+               width="800" 
+               height="600">
+        </div>
+      </section>
 
-    <!-- CARE -->
-    <section aria-labelledby="care-heading">
-      <h2 id="care-heading">Cuidado del Sombrero Mexicano</h2>
-      <p>Un buen cuidado mantiene el sombrero mexicano original bonito por años:</p>
-      <ul>
-        <li>Guarda el sombrero en un lugar fresco, seco y lejos del sol directo.</li>
-        <li>Elimina el polvo con un cepillo suave o paño limpio.</li>
-        <li>Evita mojar el sombrero de fieltro; usa un paño húmedo para manchas pequeñas.</li>
-      </ul>
-      <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb#care" class="product-link" target="_blank" rel="sponsored nofollow">
-        Ver Cuidado y Accesorios
-      </a>
-    </section>
-
-    <!-- USES -->
-    <section aria-labelledby="uses-heading">
-      <h2 id="uses-heading">Cuándo Usar Cada Sombrero Mexicano</h2>
-      <ul>
-        <li><strong>Sombrero de charro</strong> – Eventos charros, mariachi, fiestas formales.</li>
-        <li><strong>Sombrero mariachi</strong> – Conciertos, bodas, quinceañeras.</li>
-        <li><strong>Sombrero jaripeo / vaquero</strong> – Rodeos, ranchero.</li>
-        <li><strong>Sombrero vaquero / ranchero</strong> – Trabajo diario.</li>
-        <li><strong>Sombrero de paja</strong> – Playa, fiestas informales.</li>
-      </ul>
-      <p>Sombreros para cantina bar, bodas, quinceañeras y más.</p>
-      <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb" class="product-link" target="_blank" rel="sponsored nofollow">
-        Elegir Mi Sombrero
-      </a>
-    </section>
-
-    <!-- QUICK COMPARISON TABLE -->
-    <section aria-labelledby="comparison-heading">
-      <h2 id="comparison-heading">Comparativa Rápida Sombreros</h2>
-      <table>
-        <thead>
-          <tr><th>Estilo</th><th>Para</th><th>Precio</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Charro</td><td>Formal</td><td>$150-450</td></tr>
-          <tr><td>Mariachi</td><td>Shows</td><td>$120-350</td></tr>
-          <tr><td>Jaripeo</td><td>Rodeo</td><td>$100-300</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- REVIEWS FOR TRUST -->
-    <section aria-labelledby="reviews-heading">
-      <h2 id="reviews-heading">Lo Que Dicen Nuestros Clientes</h2>
-      <div class="review">"¡Perfecto sombrero charro! Calidad México auténtica." – Miguel</div>
-      <div class="review">"Mariachi sombrero espectacular para fiesta." – Sofia</div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <p>&copy; 2026 Sombreros Mexicanos | <a href="https://www.linkconnector.com/ta.php?lc=007949034203001545&atid=LafuenteSombreoWeb" target="_blank">Comprar Ahora</a></p>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <!-- HISTORIA -->
+      <section aria-labelledby="history-heading">
+        <h2 id="history-heading">Historia del Sombrero Mexicano Original</h2>
+        <p>El sombrero mexicano original, o sombrero mexicano auténtico, tiene raíces en el siglo XVI fusionando influencias españolas y tradiciones indígenas. Diseñado originalmente para protección solar, evolucionó a símbolo de identidad mexicana en mariachi, jaripeo, quinceañeras y fiestas nacionales.</p>
